@@ -1,11 +1,11 @@
-// 🌗 Toggle Theme
+
 const themeToggle = document.getElementById("theme-toggle");
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
   themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
 });
 
-// 💬 Chat
+
 const sendBtn = document.getElementById("send-btn");
 const userInput = document.getElementById("user-input");
 const chatBox = document.getElementById("chat-box");
@@ -30,8 +30,8 @@ function sendMessage() {
   addMessage(text, "user");
   userInput.value = "";
 
-  // 🧠 إرسال النص إلى السيرفر المحلي Flask
-  fetch("https://thu-metaphytic-edna.ngrok-free.dev/chat", { // هنا اكتب عنوان السيرفر المحلي بتاعك
+
+  fetch("https://thu-metaphytic-edna.ngrok-free.dev/chat", { 
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -48,7 +48,7 @@ function sendMessage() {
     });
 }
 
-// 👤 Dropdown Menu
+
 const userAvatar = document.getElementById("user-avatar");
 const dropdownMenu = document.getElementById("dropdown-menu");
 let isLoggedIn = false;
@@ -57,14 +57,14 @@ userAvatar.addEventListener("click", () => {
   dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
 });
 
-// Close dropdown if clicked outside
+
 window.addEventListener("click", (e) => {
   if (!userAvatar.contains(e.target) && !dropdownMenu.contains(e.target)) {
     dropdownMenu.style.display = "none";
   }
 });
 
-// 👤 Login / Signup functionality
+
 const loginBtn = document.getElementById("login-btn");
 const signupBtn = document.getElementById("signup-btn");
 
@@ -95,3 +95,4 @@ document.addEventListener("click", (e) => {
     isLoggedIn = false;
   }
 });
+
