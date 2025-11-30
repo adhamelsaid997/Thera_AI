@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* 🎨 الإعدادات العامة */
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -12,7 +12,7 @@ body {
 }
 
 
-/* 🧭 الهيكل العام للتطبيق */
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -248,7 +248,7 @@ body {
 }
 
 
-/* 🌗 الوضع الداكن */
+
 body.dark-mode {
   background: linear-gradient(135deg, #0f172a, #1e293b);
 }
@@ -323,7 +323,7 @@ body.dark-mode .dropdown-menu button:hover {
 
 
 
-/* 🔄 الأنيميشن */
+
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -357,7 +357,7 @@ body.dark-mode .dropdown-menu button:hover {
 }
 
 
-/* 📱 الهواتف */
+
 @media (max-width: 600px) {
   .chat-container {
     width: 100%;
@@ -387,7 +387,7 @@ body.dark-mode .dropdown-menu button:hover {
   }
 }
 
-/* 💻 التابلت */
+
 @media (min-width: 601px) and (max-width: 1024px) {
   .chat-container {
     width: 95%;
@@ -404,7 +404,7 @@ body.dark-mode .dropdown-menu button:hover {
   }
 }
 
-/* 🖥️ الشاشات الكبيرة */
+
 @media (min-width: 1025px) {
   .chat-container {
     width: 90%;
@@ -416,4 +416,5 @@ body.dark-mode .dropdown-menu button:hover {
     padding: 25px 40px;
   }
 }
+
 
