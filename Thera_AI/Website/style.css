@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* 🎨 الإعدادات العامة */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #e9edf6, #f1f5f9);
+  animation: fadeBackground 1s ease-in;
+}
+
+
+/* 🧭 الهيكل العام للتطبيق */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-header {
+  height: 60px;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.app-logo {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.theme-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.theme-btn:hover {
+  transform: rotate(20deg);
+}
+
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.login-btn {
+  background: white;
+  color: #2563eb;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #f1f5f9;
+}
+
+.chat-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 900px;
+  height: 85vh;
+  background: #f1f5f9;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: fadeUp 0.6s ease-out;
+}
+
+.chat-header {
+  background-color: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bot-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bot-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 3px;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+  background: #f3f6fa;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  scroll-behavior: smooth;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  background: #f8fafc;
+}
+
+.chat-input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #edf2f7;
+}
+
+.chat-input button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.chat-input button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.user-message, .bot-message {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 15px;
+  font-size: 15px;
+  line-height: 1.5;
+  animation: messagePop 0.25s ease-out;
+  transition: background 0.3s ease;
+}
+
+.user-message {
+  background-color: #2563eb;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 3px;
+}
+
+.bot-message {
+  background-color: #e2e8f0;
+  color: #1e293b;
+  align-self: flex-start;
+  border-bottom-left-radius: 3px;
+}
+
+
+
+.dynamic-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #3b82f6;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  border: 2px solid white;
+}
+
+.user-area {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  overflow: hidden;
+  z-index: 100;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.dropdown-menu button {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  color: #1e293b;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu button:hover {
+  background: #f1f5f9;
+}
+
+
+/* 🌗 الوضع الداكن */
+body.dark-mode {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+body.dark-mode .app-header {
+  background: #334155;
+}
+
+body.dark-mode .chat-container {
+  background: #1e293b;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .chat-header {
+  background-color: #334155;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .login-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+body.dark-mode .chat-box {
+  background: #0f172a;
+}
+
+body.dark-mode .bot-message {
+  background-color: #334155;
+  color: #f1f5f9;
+}
+
+body.dark-mode .user-message {
+  background-color: #2563eb;
+}
+
+body.dark-mode .chat-input {
+  background: #1e293b;
+  border-top: 1px solid #334155;
+}
+
+body.dark-mode .chat-input input {
+  background-color: #334155;
+  color: #e2e8f0;
+}
+
+body.dark-mode .chat-input button {
+  background-color: #3b82f6;
+}
+
+body.dark-mode .chat-input button:hover {
+  background-color: #2563eb;
+}
+
+body.dark-mode .dropdown-menu {
+  background: #334155;
+}
+
+body.dark-mode .dropdown-menu button {
+  color: #e2e8f0;
+}
+
+body.dark-mode .dropdown-menu button:hover {
+  background: #475569;
+}
+
+
+
+
+/* 🔄 الأنيميشن */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeBackground {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes messagePop {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* 📱 الهواتف */
+@media (max-width: 600px) {
+  .chat-container {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    max-width: none;
+  }
+
+  .chat-header {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .chat-box {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .chat-input input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .chat-input button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+/* 💻 التابلت */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .chat-container {
+    width: 95%;
+    height: 90vh;
+    max-width: 800px;
+  }
+
+  .chat-header {
+    font-size: 17px;
+  }
+
+  .chat-box {
+    padding: 20px;
+  }
+}
+
+/* 🖥️ الشاشات الكبيرة */
+@media (min-width: 1025px) {
+  .chat-container {
+    width: 90%;
+    height: 90vh;
+    max-width: 1000px;
+  }
+
+  .chat-box {
+    padding: 25px 40px;
+  }
+}
+

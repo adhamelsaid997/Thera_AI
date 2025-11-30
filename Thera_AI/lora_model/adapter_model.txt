@@ -1,0 +1,2 @@
+you can find adapter_model.safetensors here:
+https://drive.google.com/file/d/1AF0J0PkncFLAnqfeROpDEFO6kdnbVDTM/view?usp=drive_link

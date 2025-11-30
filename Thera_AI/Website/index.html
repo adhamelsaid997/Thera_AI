@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TheraAI Chatbot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app-container">
+
+    <!-- 🔝 Header -->
+    <header class="app-header">
+      <div class="app-logo">💬 TheraAI</div>
+
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-btn">🌙</button>
+
+        <!-- User Menu -->
+        <div class="user-area">
+          <div class="user-avatar" id="user-avatar">
+            <!-- Default Profile Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="28" height="28">
+              <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zM12 14.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+            </svg>
+          </div>
+
+          <!-- Dropdown Menu -->
+          <div class="dropdown-menu" id="dropdown-menu">
+            <button id="login-btn">Login</button>
+            <button id="signup-btn">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 💬 Chat Area -->
+    <main class="chat-main">
+      <div class="chat-container">
+        <div class="chat-header">
+          <div class="bot-info">
+            <div class="bot-avatar">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#2563eb" viewBox="0 0 24 24" width="28" height="28">
+                <path d="M12 2a1 1 0 0 1 1 1v1h3a3 3 0 0 1 3 3v9a4 4 0 0 1-4 4h-6a4 4 0 0 1-4-4V7a3 3 0 0 1 3-3h3V3a1 1 0 0 1 1-1zm-4 8a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm8 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-4 6a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 16z"/>
+              </svg>
+            </div>
+            <span>TheraAI Assistant</span>
+          </div>
+        </div>
+
+        <div id="chat-box" class="chat-box">
+          <div class="bot-message fade-in">
+            Hey there, I’m an AI assistant here to support you, not a real therapist.  <br>
+            Tell me a little about yourself
+
+          </div>
+        </div>
+
+        <div class="chat-input">
+          <input id="user-input" type="text" placeholder="Type your message..." autocomplete="off" />
+          <button id="send-btn">➤</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
