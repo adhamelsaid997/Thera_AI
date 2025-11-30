@@ -1,6 +1,8 @@
 TheraAI is an AI-powered chatbot designed to assist mental-health professionals and provide users with initial psychological guidance and supportive insights.
-This is a graduation project in Generative AI from depi round 3.
+
 The chatbot offers general mental-health advice to help users understand their feelings and determine whether they may need professional assistance.
+
+This is a graduation project in Generative AI from depi round 3.
 
 Features:
 1.  Interactive, easy-to-use chatbot.
