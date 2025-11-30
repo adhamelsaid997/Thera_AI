@@ -18,7 +18,7 @@ Repository contents:
 4.  the_model: contains the ipynb to run the model.
 5.  Trained_model: contains the fine-tuning phase of the model.
 6.  Website: contains the user interface files (html, css, js).
-7.  TheraAI.mp4: a video showing an example using ThearAI.
+7.  TheraAI.mp4: a video showing an example using TheraAI.
 
 Team members:
 1.  Adham EL-Sayed Fahmy
