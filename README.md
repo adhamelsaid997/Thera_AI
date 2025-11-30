@@ -9,7 +9,6 @@ Features:
 2.  Provides general psychological tips and supportive guidance.
 3.  Simple, user-friendly interface.
 4.  Light mode and dark mode.
-5.  TheraAI is a helpful assistant tool for therapists, not a replacement.
 
 Repository contents:
 1.  documentation: the documentation of the project TheraAI inside.
