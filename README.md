@@ -22,7 +22,9 @@ Repository contents:
 Team members:
 1.  Adham EL-Sayed Fahmy
 2.  Ahmed Hossam El-Din Ahmed
-3.  
+3.  Gasser Galal
+4.  Abdulrahman Mohamed Alswirky
+5.  Amr Mohamed
 
 Note that:
 TheraAI is not a replacement for a licensed mental-health professional (Therapist).
