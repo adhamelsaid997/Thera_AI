@@ -19,6 +19,8 @@ Repository contents:
 6.  Website: contains the user interface files (html, css, js).
 7.  TheraAI.mp4: a video showing an example using TheraAI.
 
+Supervised by: Eng. Mohamed El-Mesawy
+
 Team members:
 1.  Adham EL-Sayed Fahmy
 2.  Ahmed Hossam El-Din Ahmed
